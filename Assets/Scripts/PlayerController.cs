@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
         Vector3 cameraRight = cameraTransform.right;
         cameraForward.y = 0;
         cameraRight.y = 0;
-        // cameraForward.Normalize();
-        // cameraRight.Normalize();
+            // cameraForward.Normalize();
+            // cameraRight.Normalize();
         moveDirection = cameraForward * direction.z + cameraRight * direction.x;
 
     }
