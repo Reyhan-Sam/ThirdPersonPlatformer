@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        playerRB.AddForce(Vector3.up * force, ForceMode.Impulse);
+        playerRB.AddForce(Vector3.up * 5, ForceMode.Impulse);
     }
 
      void FixedUpdate()
