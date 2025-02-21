@@ -5,6 +5,7 @@ public class InputManager : MonoBehaviour
 {
     public UnityEvent OnSpacePressed = new UnityEvent();
     public UnityEvent<Vector3> OnMove = new UnityEvent<Vector3>();
+    public UnityEvent OnDash = new UnityEvent();
     
     // Update is called once per frame
     void Update()
@@ -34,6 +35,10 @@ public class InputManager : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             MoveDirection += Vector3.right;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            OnDash?.Invoke();
         }
 
         OnMove?.Invoke(MoveDirection);
